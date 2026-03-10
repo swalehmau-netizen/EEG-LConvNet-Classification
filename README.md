@@ -10,25 +10,25 @@ Journal: Engineering Reports
 Year: 2023
 URL: https://onlinelibrary.wiley.com/doi/10.1002/eng2.12827
 
-# # Model Architecture  
+# Model Architecture  
 <img width="707" height="506" alt="Picture1" src="https://github.com/user-attachments/assets/e91458f5-1ba9-4516-a95b-6c250c1f7d28" />
 
-# # Key Contributions
+# Key Contributions
 • Proposed LConvNet architecture for EEG classification
 • Integration of convolutional and temporal modeling
 • Extraction of spatial and temporal EEG features
 • Improved epileptiform pattern detection
 
-## Input Data Format
+# Input Data Format
 EEG input shape: (256, 25)
 256 → time samples  
 25 → EEG channels
 
-# # Installation
+# Installation
 pip install -r requirements.txt
 
-## Training the Model
+# Training the Model
 python training/train_model.py
 
-## Evaluation
+# Evaluation
 python evaluation/evaluate_model.py
