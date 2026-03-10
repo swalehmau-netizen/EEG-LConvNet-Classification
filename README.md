@@ -47,11 +47,7 @@ python evaluation/evaluate_model.py
 
 If you use this work, please cite:
 
-@article{omar2024enhancing,
-  title={Enhancing EEG signals classification using LSTM-CNN architecture},
-  author={Omar, Swaleh M and Kimwele, Michael and Olowolayemo, Akeem and Kaburu, Dennis M},
-  journal={Engineering Reports},
-  volume={6},
+Omar, S. M., Kimwele, M., Olowolayemo, A., & Kaburu, D. M. (2024). Enhancing EEG signals classification using LSTM-CNN architecture. Engineering Reports, 6, e12827.
   number={9},
   pages={e12827},
   year={2024},
