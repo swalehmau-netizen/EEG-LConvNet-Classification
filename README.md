@@ -33,3 +33,12 @@ python training/train_model.py
 
 # Evaluation
 python evaluation/evaluate_model.py
+
+# Requirements
+• tensorflow
+• numpy
+• scipy
+• matplotlib
+• scikit-learn
+• mne
+• pandas
