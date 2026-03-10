@@ -21,6 +21,7 @@ URL: https://onlinelibrary.wiley.com/doi/10.1002/eng2.12827
 
 # Input Data Format
 EEG input shape: (256, 25)
+
 256 → time samples  
 25 → EEG channels
 
