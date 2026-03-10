@@ -42,3 +42,18 @@ python evaluation/evaluate_model.py
 • scikit-learn
 • mne
 • pandas
+
+## Citation
+
+If you use this work, please cite:
+
+@article{omar2024enhancing,
+  title={Enhancing EEG signals classification using LSTM-CNN architecture},
+  author={Omar, Swaleh M and Kimwele, Michael and Olowolayemo, Akeem and Kaburu, Dennis M},
+  journal={Engineering Reports},
+  volume={6},
+  number={9},
+  pages={e12827},
+  year={2024},
+  publisher={Wiley Online Library}
+}
