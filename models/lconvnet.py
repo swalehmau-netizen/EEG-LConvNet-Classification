@@ -1,0 +1,34 @@
+n_timesteps = 256
+n_channels = 25
+n_classes=1
+dropoutRate=0.5
+def TDLSTM_ShallowConvNetx():
+    clear_session()
+    model=Sequential()
+
+    input_tensor = Input(shape=(n_timesteps, n_channels))
+    
+    # CNN component
+    block1 = Reshape((n_channels, n_timesteps, 1))(input_tensor)
+    block1 = Conv2D(64, (3, 3), activation='relu', padding='same')(block1)
+    block1 = MaxPooling2D(pool_size=(2, 2))(block1)
+    block1 = Conv2D(128, (5, 5), activation='relu', padding='same')(block1)
+    block1 = MaxPooling2D(pool_size=(2, 2))(block1)
+    block1 = Conv2D(256, (7, 7), activation='relu', padding='same')(block1)
+    block1 = MaxPooling2D(pool_size=(2, 2))(block1)
+    block1 = Dropout(dropoutRate)(block1)
+
+    block1 = TimeDistributed(Flatten())(block1)
+    block1 = TimeDistributed(Dense(64))(block1)
+    x = LSTM(64)(block1)
+    
+    # Concatenate CNN output and LSTM output
+    concat = Concatenate()([x, pooling])
+    output = Dense(n_classes, kernel_constraint=max_norm(0.5), activation='sigmoid')(concat)
+
+    opt = keras.optimizers.Adam(learning_rate=0.00001)
+
+    model = Model(input_tensor, output)
+    model.compile(optimizer=opt, loss='binary_crossentropy', metrics=['accuracy'])
+
+    return model
